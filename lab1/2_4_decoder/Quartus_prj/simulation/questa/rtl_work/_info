@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/FPGA/2_4_decoder/Quartus_prj/simulation/questa
+T_opt
+!s110 1729327205
+V`5z=8G;jFjm8WBP4U]4Ro1
+04 10 4 work tb_decoder fast 0
+=1-581122e54c08-67137064-e5-3d30
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vdecoder
+2D:/FPGA/2_4_decoder/RTL/decoder.v
+!s110 1729327202
+!i10b 1
+!s100 _6R?PzDH@d^<i>Eci5CQJ1
+IaAEGDIc0=zKInW1F;UenJ0
+R1
+w1729326953
+8D:/FPGA/2_4_decoder/RTL/decoder.v
+FD:/FPGA/2_4_decoder/RTL/decoder.v
+!i122 0
+L0 1 19
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z5 !s108 1729327202.000000
+!s107 D:/FPGA/2_4_decoder/RTL/decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/2_4_decoder/RTL|D:/FPGA/2_4_decoder/RTL/decoder.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/FPGA/2_4_decoder/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_decoder
+2D:/FPGA/2_4_decoder/Quartus_prj/../Sim/tb_decoder.v
+!s110 1729327203
+!i10b 1
+!s100 fHlG`M5]>2bo1THB1S9OX0
+IAZDPMPchYLbFmYfH4T8]U0
+R1
+w1729085658
+8D:/FPGA/2_4_decoder/Quartus_prj/../Sim/tb_decoder.v
+FD:/FPGA/2_4_decoder/Quartus_prj/../Sim/tb_decoder.v
+!i122 1
+L0 2 42
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGA/2_4_decoder/Quartus_prj/../Sim/tb_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/2_4_decoder/Quartus_prj/../Sim|D:/FPGA/2_4_decoder/Quartus_prj/../Sim/tb_decoder.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/FPGA/2_4_decoder/Quartus_prj/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

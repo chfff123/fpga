@@ -1,0 +1,151 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do 2_4_decoder_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying d:/quartus/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGA/2_4_decoder/RTL {D:/FPGA/2_4_decoder/RTL/decoder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:40:02 on Oct 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA/2_4_decoder/RTL" D:/FPGA/2_4_decoder/RTL/decoder.v 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 16:40:02 on Oct 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGA/2_4_decoder/Quartus_prj/../Sim {D:/FPGA/2_4_decoder/Quartus_prj/../Sim/tb_decoder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 16:40:02 on Oct 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA/2_4_decoder/Quartus_prj/../Sim" D:/FPGA/2_4_decoder/Quartus_prj/../Sim/tb_decoder.v 
+# -- Compiling module tb_decoder
+# 
+# Top level modules:
+# 	tb_decoder
+# End time: 16:40:03 on Oct 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_decoder
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_decoder 
+# Start time: 16:40:03 on Oct 19,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.tb_decoder(fast)
+# Loading work.decoder(fast)
+# Causality operation skipped due to absence of debug database file
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+# @time    0ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time   10ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time   20ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time   30ns:in0=1 in1=0 Enable=1 out0=1 out1=0 out2=1 out3=1
+# @time   60ns:in0=0 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time   70ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time   80ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time   90ns:in0=0 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  100ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  110ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  120ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  130ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  140ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  150ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  160ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  170ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  180ns:in0=0 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  190ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  200ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  210ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  220ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  230ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  240ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  250ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  260ns:in0=1 in1=0 Enable=1 out0=1 out1=0 out2=1 out3=1
+# @time  280ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  300ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  310ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  320ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  330ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  340ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  350ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  360ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  370ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  380ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  390ns:in0=1 in1=0 Enable=1 out0=1 out1=0 out2=1 out3=1
+# @time  400ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  410ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  420ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  430ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  440ns:in0=0 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  450ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  460ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  480ns:in0=0 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  500ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  510ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  520ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  540ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  550ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  560ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  570ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  580ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  600ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  610ns:in0=1 in1=0 Enable=1 out0=1 out1=0 out2=1 out3=1
+# @time  620ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  630ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  640ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  650ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  660ns:in0=1 in1=0 Enable=1 out0=1 out1=0 out2=1 out3=1
+# @time  670ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  680ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  690ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  700ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  710ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  720ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  730ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  770ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  780ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  800ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  810ns:in0=0 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  820ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  830ns:in0=1 in1=0 Enable=1 out0=1 out1=0 out2=1 out3=1
+# @time  840ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  850ns:in0=0 in1=1 Enable=1 out0=1 out1=1 out2=0 out3=1
+# @time  860ns:in0=1 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  880ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  890ns:in0=0 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  910ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  920ns:in0=1 in1=0 Enable=1 out0=1 out1=0 out2=1 out3=1
+# @time  930ns:in0=0 in1=0 Enable=1 out0=1 out1=1 out2=1 out3=0
+# @time  940ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  950ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  960ns:in0=1 in1=1 Enable=0 out0=1 out1=1 out2=1 out3=1
+# @time  970ns:in0=1 in1=1 Enable=1 out0=0 out1=1 out2=1 out3=1
+# @time  980ns:in0=0 in1=0 Enable=0 out0=1 out1=1 out2=1 out3=1
+# End time: 16:40:51 on Oct 19,2024, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 1

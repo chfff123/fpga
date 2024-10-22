@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/FPGA/comparator/Quartus_prj/simulation/questa
+T_opt
+!s110 1729325861
+Vjg5K5G@TiJN9I:hO]S=dV2
+04 13 4 work tb_comparator fast 0
+=1-581122e54c08-67136b24-bc-b50
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vcomparator
+2D:/FPGA/comparator/RTL/comparator.v
+!s110 1729325858
+!i10b 1
+!s100 @_STWkVDN5[HeeTHiDzO03
+I4b2l3<kfT<?@70_EBGaX]0
+R1
+w1729325629
+8D:/FPGA/comparator/RTL/comparator.v
+FD:/FPGA/comparator/RTL/comparator.v
+!i122 0
+L0 1 20
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z5 !s108 1729325858.000000
+!s107 D:/FPGA/comparator/RTL/comparator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/comparator/RTL|D:/FPGA/comparator/RTL/comparator.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/FPGA/comparator/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_comparator
+2D:/FPGA/comparator/Quartus_prj/../Sim/tb_comparator.v
+!s110 1729325859
+!i10b 1
+!s100 5TZIb?:J:69L8bWb6c[X62
+IQXZT?:>J4;6[NVBc:7e9j3
+R1
+w1729226583
+8D:/FPGA/comparator/Quartus_prj/../Sim/tb_comparator.v
+FD:/FPGA/comparator/Quartus_prj/../Sim/tb_comparator.v
+!i122 1
+L0 3 43
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGA/comparator/Quartus_prj/../Sim/tb_comparator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/comparator/Quartus_prj/../Sim|D:/FPGA/comparator/Quartus_prj/../Sim/tb_comparator.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/FPGA/comparator/Quartus_prj/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

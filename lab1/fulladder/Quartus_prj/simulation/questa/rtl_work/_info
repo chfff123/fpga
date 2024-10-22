@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/FPGA/fulladder/Quartus_prj/simulation/questa
+T_opt
+!s110 1729328860
+V=H49Z4hPK=d9XnaPWNPW82
+04 12 4 work tb_fulladder fast 0
+=1-581122e54c08-671376db-fe-2714
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vfulladder
+2D:/FPGA/fulladder/RTL/fulladder.v
+!s110 1729328857
+!i10b 1
+!s100 E1jS79e]Rb7W1mRI1eW=S0
+IW=b2VWj2Jg6M]]m[g23@i0
+R1
+w1729328663
+8D:/FPGA/fulladder/RTL/fulladder.v
+FD:/FPGA/fulladder/RTL/fulladder.v
+!i122 0
+L0 1 13
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z5 !s108 1729328857.000000
+!s107 D:/FPGA/fulladder/RTL/fulladder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/fulladder/RTL|D:/FPGA/fulladder/RTL/fulladder.v|
+!i113 0
+Z6 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+D:/FPGA/fulladder/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_fulladder
+2D:/FPGA/fulladder/Quartus_prj/../Sim/tb_fulladder.v
+!s110 1729328858
+!i10b 1
+!s100 TkjUC[L^@Q>1foaDNIAJV2
+IKR5=FVAC2>Do^j12aHZFb2
+R1
+w1729080585
+8D:/FPGA/fulladder/Quartus_prj/../Sim/tb_fulladder.v
+FD:/FPGA/fulladder/Quartus_prj/../Sim/tb_fulladder.v
+!i122 1
+L0 2 40
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/FPGA/fulladder/Quartus_prj/../Sim/tb_fulladder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA/fulladder/Quartus_prj/../Sim|D:/FPGA/fulladder/Quartus_prj/../Sim/tb_fulladder.v|
+!i113 0
+R6
+!s92 -vlog01compat -work work +incdir+D:/FPGA/fulladder/Quartus_prj/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2

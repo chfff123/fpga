@@ -1,0 +1,10 @@
+|comparator
+a => LessThan0.IN1
+a => always0.IN0
+b => LessThan0.IN2
+b => always0.IN1
+less <= less.DB_MAX_OUTPUT_PORT_TYPE
+great <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+equal <= equal.DB_MAX_OUTPUT_PORT_TYPE
+
+

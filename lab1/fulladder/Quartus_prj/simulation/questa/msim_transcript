@@ -1,0 +1,149 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do fulladder_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying d:/quartus/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGA/fulladder/RTL {D:/FPGA/fulladder/RTL/fulladder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:07:37 on Oct 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA/fulladder/RTL" D:/FPGA/fulladder/RTL/fulladder.v 
+# -- Compiling module fulladder
+# 
+# Top level modules:
+# 	fulladder
+# End time: 17:07:37 on Oct 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/FPGA/fulladder/Quartus_prj/../Sim {D:/FPGA/fulladder/Quartus_prj/../Sim/tb_fulladder.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:07:37 on Oct 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/FPGA/fulladder/Quartus_prj/../Sim" D:/FPGA/fulladder/Quartus_prj/../Sim/tb_fulladder.v 
+# -- Compiling module tb_fulladder
+# 
+# Top level modules:
+# 	tb_fulladder
+# End time: 17:07:38 on Oct 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_fulladder
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_fulladder 
+# Start time: 17:07:38 on Oct 19,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.tb_fulladder(fast)
+# Loading work.fulladder(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+# @time    0ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time   10ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time   20ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time   30ns:X=1 Y=0 Carry_in=1 Sum=0 Carry_out=1
+# @time   60ns:X=0 Y=1 Carry_in=0 Sum=1 Carry_out=0
+# @time   70ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time   80ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time   90ns:X=0 Y=1 Carry_in=0 Sum=1 Carry_out=0
+# @time  100ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  110ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  120ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  130ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  140ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  150ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  160ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  170ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  180ns:X=0 Y=1 Carry_in=0 Sum=1 Carry_out=0
+# @time  190ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  200ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  210ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  220ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  230ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  240ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  250ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  260ns:X=1 Y=0 Carry_in=1 Sum=0 Carry_out=1
+# @time  280ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  300ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  310ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  320ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  330ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  340ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  350ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  360ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  370ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  380ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  390ns:X=1 Y=0 Carry_in=1 Sum=0 Carry_out=1
+# @time  400ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  410ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  420ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  430ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  440ns:X=0 Y=1 Carry_in=0 Sum=1 Carry_out=0
+# @time  450ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  460ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  480ns:X=0 Y=1 Carry_in=0 Sum=1 Carry_out=0
+# @time  500ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  510ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  520ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  540ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  550ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  560ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  570ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  580ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  600ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  610ns:X=1 Y=0 Carry_in=1 Sum=0 Carry_out=1
+# @time  620ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  630ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  640ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  650ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  660ns:X=1 Y=0 Carry_in=1 Sum=0 Carry_out=1
+# @time  670ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  680ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  690ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  700ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  710ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  720ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  730ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  770ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  780ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  800ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  810ns:X=0 Y=1 Carry_in=0 Sum=1 Carry_out=0
+# @time  820ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  830ns:X=1 Y=0 Carry_in=1 Sum=0 Carry_out=1
+# @time  840ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  850ns:X=0 Y=1 Carry_in=1 Sum=0 Carry_out=1
+# @time  860ns:X=1 Y=0 Carry_in=0 Sum=1 Carry_out=0
+# @time  880ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  890ns:X=0 Y=1 Carry_in=0 Sum=1 Carry_out=0
+# @time  910ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  920ns:X=1 Y=0 Carry_in=1 Sum=0 Carry_out=1
+# @time  930ns:X=0 Y=0 Carry_in=1 Sum=1 Carry_out=0
+# @time  940ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# @time  950ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  960ns:X=1 Y=1 Carry_in=0 Sum=0 Carry_out=1
+# @time  970ns:X=1 Y=1 Carry_in=1 Sum=1 Carry_out=1
+# @time  980ns:X=0 Y=0 Carry_in=0 Sum=0 Carry_out=0
+# Causality operation skipped due to absence of debug database file
