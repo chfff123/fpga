@@ -1,0 +1,29 @@
+module counter
+(
+input wire sys_clk,
+input wire sys_rst_n,
+output wire led_out
+);
+
+ reg [24:0] cnt; 
+ 
+localparam int Max_cnt = 25'd24_999_999;
+ 
+always@(posedge sys_clk or negedge sys_rst_n) begin
+  if(sys_rst_n == 0 ) 
+		cnt<= 25'b0;
+  else if (cnt == Max_cnt)
+       cnt<= 25'b0;
+  else
+      cnt<=cnt+1;
+
+
+always@(posedge sys_clk or negedge sys_rst_n)
+  if(sys_rst_n == 0)
+  led_out <= 0;
+  else if (cnt == Max_cnt)
+  led_out <= !led_out;
+  else 
+    led_out <=0;
+	 
+endmodule
