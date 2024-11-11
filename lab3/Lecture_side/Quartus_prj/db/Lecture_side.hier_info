@@ -1,0 +1,15 @@
+|Lecture_side
+sys_clk => sell_r.CLK
+sys_clk => change_r.CLK
+sys_clk => st_cur~1.DATAIN
+sys_rst_n => sell_r.ACLR
+sys_rst_n => change_r.ACLR
+sys_rst_n => st_cur~3.DATAIN
+coin[0] => Equal0.IN3
+coin[0] => Equal1.IN3
+coin[1] => Equal0.IN2
+coin[1] => Equal1.IN2
+change << change_r.DB_MAX_OUTPUT_PORT_TYPE
+sell << sell_r.DB_MAX_OUTPUT_PORT_TYPE
+
+

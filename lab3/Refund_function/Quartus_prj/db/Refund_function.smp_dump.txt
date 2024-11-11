@@ -1,0 +1,9 @@
+
+State Machine - |Refund_function|st_cur
+Name st_cur.get25 st_cur.get20 st_cur.get15 st_cur.get10 st_cur.get05 st_cur.000 
+st_cur.000 0 0 0 0 0 0 
+st_cur.get05 0 0 0 0 1 1 
+st_cur.get10 0 0 0 1 0 1 
+st_cur.get15 0 0 1 0 0 1 
+st_cur.get20 0 1 0 0 0 1 
+st_cur.get25 1 0 0 0 0 1 

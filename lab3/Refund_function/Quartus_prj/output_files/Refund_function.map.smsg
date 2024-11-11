@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Refund_function.v(64): always construct contains both blocking and non-blocking assignments File: C:/Users/g1390/Desktop/FPGA/lab3/Refund_function/RTL/Refund_function.v Line: 64

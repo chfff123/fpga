@@ -1,0 +1,9 @@
+
+State Machine - |Lecture_side|st_cur
+Name st_cur.GET25 st_cur.GET20 st_cur.GET15 st_cur.GET10 st_cur.GET05 st_cur.000 
+st_cur.000 0 0 0 0 0 0 
+st_cur.GET05 0 0 0 0 1 1 
+st_cur.GET10 0 0 0 1 0 1 
+st_cur.GET15 0 0 1 0 0 1 
+st_cur.GET20 0 1 0 0 0 1 
+st_cur.GET25 1 0 0 0 0 1 

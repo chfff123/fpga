@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "charge[0]",
+					"strict" : false
+				},
+				{
+					"name" : "charge[1]",
+					"strict" : false
+				},
+				{
+					"name" : "charge[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sell",
+					"strict" : false
+				},
+				{
+					"name" : "sys_rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "sys_clk",
+					"strict" : false
+				},
+				{
+					"name" : "coin[0]",
+					"strict" : false
+				},
+				{
+					"name" : "coin[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

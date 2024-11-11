@@ -1,0 +1,75 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/simulation/questa
+T_opt
+!s110 1730442186
+V<^iB:[zIz=`4>eRMIK_1z3
+04 15 4 work tb_Lecture_side fast 0
+=1-c43d1a1afe50-672473ca-a-5bc4
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vLecture_side
+2C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/RTL/Lecture_side.v
+Z3 !s110 1730442185
+!i10b 1
+!s100 5LE`=H`JTl8C8llGZ7>1i0
+I[H`cCdHzG=YQ@ZOi24RXF3
+R1
+w1730296206
+8C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/RTL/Lecture_side.v
+FC:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/RTL/Lecture_side.v
+!i122 0
+L0 1 85
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z6 !s108 1730442185.000000
+!s107 C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/RTL/Lecture_side.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/RTL|C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/RTL/Lecture_side.v|
+!i113 0
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@lecture_side
+vtb_Lecture_side
+2C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/../Sim/tb_Lecture_side.v
+R3
+!i10b 1
+!s100 UWTQ2XCdnWJzM@VOK>Pfo3
+ISC2JMizKzM^IEZ;5G^[[d2
+R1
+w1730442160
+8C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/../Sim/tb_Lecture_side.v
+FC:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/../Sim/tb_Lecture_side.v
+!i122 1
+L0 2 66
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/../Sim/tb_Lecture_side.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/../Sim|C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/../Sim/tb_Lecture_side.v|
+!i113 0
+R7
+!s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/lab3/Lecture_side/Quartus_prj/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+ntb_@lecture_side

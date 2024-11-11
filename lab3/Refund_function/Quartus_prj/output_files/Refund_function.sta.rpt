@@ -1,0 +1,1102 @@
+Timing Analyzer report for Refund_function
+Fri Nov  1 15:01:56 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'sys_rst_n'
+ 13. Slow 1200mV 85C Model Setup: 'sys_clk'
+ 14. Slow 1200mV 85C Model Hold: 'sys_clk'
+ 15. Slow 1200mV 85C Model Hold: 'sys_rst_n'
+ 16. Slow 1200mV 85C Model Recovery: 'sys_clk'
+ 17. Slow 1200mV 85C Model Removal: 'sys_clk'
+ 18. Slow 1200mV 85C Model Metastability Summary
+ 19. Slow 1200mV 0C Model Fmax Summary
+ 20. Slow 1200mV 0C Model Setup Summary
+ 21. Slow 1200mV 0C Model Hold Summary
+ 22. Slow 1200mV 0C Model Recovery Summary
+ 23. Slow 1200mV 0C Model Removal Summary
+ 24. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Slow 1200mV 0C Model Setup: 'sys_rst_n'
+ 26. Slow 1200mV 0C Model Setup: 'sys_clk'
+ 27. Slow 1200mV 0C Model Hold: 'sys_clk'
+ 28. Slow 1200mV 0C Model Hold: 'sys_rst_n'
+ 29. Slow 1200mV 0C Model Recovery: 'sys_clk'
+ 30. Slow 1200mV 0C Model Removal: 'sys_clk'
+ 31. Slow 1200mV 0C Model Metastability Summary
+ 32. Fast 1200mV 0C Model Setup Summary
+ 33. Fast 1200mV 0C Model Hold Summary
+ 34. Fast 1200mV 0C Model Recovery Summary
+ 35. Fast 1200mV 0C Model Removal Summary
+ 36. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 37. Fast 1200mV 0C Model Setup: 'sys_rst_n'
+ 38. Fast 1200mV 0C Model Setup: 'sys_clk'
+ 39. Fast 1200mV 0C Model Hold: 'sys_clk'
+ 40. Fast 1200mV 0C Model Hold: 'sys_rst_n'
+ 41. Fast 1200mV 0C Model Recovery: 'sys_clk'
+ 42. Fast 1200mV 0C Model Removal: 'sys_clk'
+ 43. Fast 1200mV 0C Model Metastability Summary
+ 44. Multicorner Timing Analysis Summary
+ 45. Board Trace Model Assignments
+ 46. Input Transition Times
+ 47. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 48. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 49. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 50. Setup Transfers
+ 51. Hold Transfers
+ 52. Recovery Transfers
+ 53. Removal Transfers
+ 54. Report TCCS
+ 55. Report RSKM
+ 56. Unconstrained Paths Summary
+ 57. Clock Status Summary
+ 58. Unconstrained Input Ports
+ 59. Unconstrained Output Ports
+ 60. Unconstrained Input Ports
+ 61. Unconstrained Output Ports
+ 62. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                        ;
++-----------------------+--------------------------------------------------------+
+; Quartus Prime Version ; Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                 ;
+; Revision Name         ; Refund_function                                        ;
+; Device Family         ; Cyclone IV E                                           ;
+; Device Name           ; EP4CE10F17C8                                           ;
+; Timing Models         ; Final                                                  ;
+; Delay Model           ; Combined                                               ;
+; Rise/Fall Delays      ; Enabled                                                ;
++-----------------------+--------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.07        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.6%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; sys_clk    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sys_clk }   ;
+; sys_rst_n  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sys_rst_n } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 621.12 MHz ; 250.0 MHz       ; sys_clk    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-----------+--------+----------------+
+; Clock     ; Slack  ; End Point TNS  ;
++-----------+--------+----------------+
+; sys_rst_n ; -2.442 ; -6.659         ;
+; sys_clk   ; -0.610 ; -3.056         ;
++-----------+--------+----------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-----------+-------+----------------+
+; Clock     ; Slack ; End Point TNS  ;
++-----------+-------+----------------+
+; sys_clk   ; 0.452 ; 0.000          ;
+; sys_rst_n ; 1.175 ; 0.000          ;
++-----------+-------+----------------+
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++---------+-------+----------------------+
+; Clock   ; Slack ; End Point TNS        ;
++---------+-------+----------------------+
+; sys_clk ; 0.060 ; 0.000                ;
++---------+-------+----------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++---------+--------+--------------------+
+; Clock   ; Slack  ; End Point TNS      ;
++---------+--------+--------------------+
+; sys_clk ; -0.091 ; -0.910             ;
++---------+--------+--------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-----------+--------+------------------------------+
+; Clock     ; Slack  ; End Point TNS                ;
++-----------+--------+------------------------------+
+; sys_clk   ; -3.000 ; -17.870                      ;
+; sys_rst_n ; -3.000 ; -3.000                       ;
++-----------+--------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'sys_rst_n'                                                                    ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; -2.442 ; st_cur.get20 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 2.291      ;
+; -2.329 ; st_cur.get15 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 2.188      ;
+; -2.317 ; st_cur.get10 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 2.176      ;
+; -2.261 ; st_cur.get25 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 2.110      ;
+; -2.209 ; st_cur.get15 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 2.058      ;
+; -2.204 ; st_cur.get20 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 2.063      ;
+; -2.023 ; st_cur.get25 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 1.882      ;
+; -1.950 ; st_cur.get05 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 1.809      ;
+; -1.888 ; st_cur.get20 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.119     ; 1.784      ;
+; -1.764 ; st_cur.get05 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 1.613      ;
+; -1.733 ; st_cur.get10 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.024      ; 1.582      ;
+; -1.707 ; st_cur.get25 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.119     ; 1.603      ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'sys_clk'                                                                               ;
++--------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.610 ; st_cur.get10  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.529      ;
+; -0.596 ; st_cur.get15  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.515      ;
+; -0.412 ; st_cur.get05  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.331      ;
+; -0.406 ; st_cur.000    ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.325      ;
+; -0.398 ; st_cur.get05  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.317      ;
+; -0.373 ; st_cur.get25  ; charge_r[0]~_emulated ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.292      ;
+; -0.352 ; st_cur.get20  ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.271      ;
+; -0.301 ; st_cur.get15  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.220      ;
+; -0.261 ; st_cur.000    ; st_cur.get05          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.180      ;
+; -0.237 ; charge_r[0]~1 ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.198     ; 1.020      ;
+; -0.216 ; st_cur.get10  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.135      ;
+; -0.211 ; st_cur.get10  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.130      ;
+; -0.198 ; st_cur.get15  ; st_cur.get25          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.117      ;
+; -0.168 ; st_cur.get20  ; sell_r                ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 1.087      ;
+; -0.157 ; charge_r[1]~5 ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.198     ; 0.940      ;
+; -0.040 ; charge_r[2]~9 ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.049     ; 0.972      ;
+; -0.002 ; st_cur.get25  ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 0.921      ;
+; 0.013  ; st_cur.get25  ; sell_r                ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 0.906      ;
+; 0.097  ; st_cur.000    ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 0.822      ;
+; 0.097  ; st_cur.get05  ; st_cur.get05          ; sys_clk      ; sys_clk     ; 1.000        ; -0.082     ; 0.822      ;
++--------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'sys_clk'                                                                               ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.452 ; st_cur.000    ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; st_cur.get05  ; st_cur.get05          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.746      ;
+; 0.499 ; st_cur.get25  ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.793      ;
+; 0.515 ; st_cur.get25  ; sell_r                ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.809      ;
+; 0.528 ; charge_r[2]~9 ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 0.119      ; 0.899      ;
+; 0.614 ; charge_r[0]~1 ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; -0.024     ; 0.842      ;
+; 0.638 ; charge_r[1]~5 ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; -0.024     ; 0.866      ;
+; 0.654 ; st_cur.get20  ; sell_r                ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.948      ;
+; 0.672 ; st_cur.get15  ; st_cur.get25          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.966      ;
+; 0.691 ; st_cur.get10  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.985      ;
+; 0.694 ; st_cur.get10  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 0.988      ;
+; 0.772 ; st_cur.get25  ; charge_r[0]~_emulated ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.066      ;
+; 0.775 ; st_cur.000    ; st_cur.get05          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.069      ;
+; 0.796 ; st_cur.get15  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.090      ;
+; 0.821 ; st_cur.get20  ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.115      ;
+; 0.848 ; st_cur.get05  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.142      ;
+; 0.870 ; st_cur.000    ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.164      ;
+; 0.938 ; st_cur.get05  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.232      ;
+; 1.069 ; st_cur.get15  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.363      ;
+; 1.088 ; st_cur.get10  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.082      ; 1.382      ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'sys_rst_n'                                                                    ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; 1.175 ; st_cur.get05 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.413      ;
+; 1.182 ; st_cur.get10 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.420      ;
+; 1.361 ; st_cur.get25 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.049      ; 1.450      ;
+; 1.409 ; st_cur.get05 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.647      ;
+; 1.500 ; st_cur.get20 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.049      ; 1.589      ;
+; 1.525 ; st_cur.get20 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.763      ;
+; 1.532 ; st_cur.get25 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.770      ;
+; 1.627 ; st_cur.get15 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.865      ;
+; 1.671 ; st_cur.get20 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.909      ;
+; 1.684 ; st_cur.get25 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 1.922      ;
+; 1.765 ; st_cur.get15 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 2.003      ;
+; 1.808 ; st_cur.get10 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.198      ; 2.046      ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery: 'sys_clk'                                                                       ;
++-------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.060 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.060 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.520      ; 2.941      ;
+; 0.584 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
+; 0.584 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.520      ; 2.917      ;
++-------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal: 'sys_clk'                                                                         ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.091 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; -0.091 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.617      ; 2.778      ;
+; 0.438  ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
+; 0.438  ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.617      ; 2.807      ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 688.71 MHz ; 250.0 MHz       ; sys_clk    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; sys_rst_n ; -2.164 ; -5.859        ;
+; sys_clk   ; -0.452 ; -1.884        ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; sys_clk   ; 0.401 ; 0.000         ;
+; sys_rst_n ; 1.082 ; 0.000         ;
++-----------+-------+---------------+
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++---------+-------+---------------------+
+; Clock   ; Slack ; End Point TNS       ;
++---------+-------+---------------------+
+; sys_clk ; 0.130 ; 0.000               ;
++---------+-------+---------------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++---------+--------+-------------------+
+; Clock   ; Slack  ; End Point TNS     ;
++---------+--------+-------------------+
+; sys_clk ; -0.089 ; -0.890            ;
++---------+--------+-------------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; sys_clk   ; -3.000 ; -17.870                     ;
+; sys_rst_n ; -3.000 ; -3.000                      ;
++-----------+--------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'sys_rst_n'                                                                     ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; -2.164 ; st_cur.get20 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 2.112      ;
+; -2.072 ; st_cur.get15 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 2.030      ;
+; -2.055 ; st_cur.get10 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 2.013      ;
+; -1.998 ; st_cur.get25 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 1.946      ;
+; -1.946 ; st_cur.get15 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 1.894      ;
+; -1.918 ; st_cur.get20 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 1.876      ;
+; -1.759 ; st_cur.get25 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 1.717      ;
+; -1.714 ; st_cur.get05 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 1.672      ;
+; -1.623 ; st_cur.get20 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.097     ; 1.615      ;
+; -1.507 ; st_cur.get05 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 1.455      ;
+; -1.495 ; st_cur.get10 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; 0.036      ; 1.443      ;
+; -1.457 ; st_cur.get25 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.097     ; 1.449      ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'sys_clk'                                                                                ;
++--------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.452 ; st_cur.get10  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.381      ;
+; -0.437 ; st_cur.get15  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.366      ;
+; -0.292 ; st_cur.000    ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.221      ;
+; -0.279 ; st_cur.get05  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.208      ;
+; -0.258 ; st_cur.get05  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.187      ;
+; -0.237 ; st_cur.get25  ; charge_r[0]~_emulated ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.166      ;
+; -0.221 ; st_cur.get20  ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.150      ;
+; -0.202 ; charge_r[0]~1 ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.192     ; 0.992      ;
+; -0.168 ; st_cur.get15  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.097      ;
+; -0.139 ; st_cur.000    ; st_cur.get05          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.068      ;
+; -0.097 ; charge_r[1]~5 ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.192     ; 0.887      ;
+; -0.096 ; st_cur.get10  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.025      ;
+; -0.092 ; st_cur.get10  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.021      ;
+; -0.078 ; st_cur.get15  ; st_cur.get25          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 1.007      ;
+; -0.055 ; st_cur.get20  ; sell_r                ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 0.984      ;
+; 0.012  ; charge_r[2]~9 ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.054     ; 0.916      ;
+; 0.091  ; st_cur.get25  ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 0.838      ;
+; 0.111  ; st_cur.get25  ; sell_r                ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 0.818      ;
+; 0.184  ; st_cur.000    ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 0.745      ;
+; 0.184  ; st_cur.get05  ; st_cur.get05          ; sys_clk      ; sys_clk     ; 1.000        ; -0.073     ; 0.745      ;
++--------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'sys_clk'                                                                                ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.401 ; st_cur.000    ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; st_cur.get05  ; st_cur.get05          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.669      ;
+; 0.463 ; st_cur.get25  ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.731      ;
+; 0.485 ; st_cur.get25  ; sell_r                ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.753      ;
+; 0.486 ; charge_r[2]~9 ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 0.097      ; 0.818      ;
+; 0.547 ; charge_r[0]~1 ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; -0.036     ; 0.746      ;
+; 0.590 ; charge_r[1]~5 ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; -0.036     ; 0.789      ;
+; 0.612 ; st_cur.get20  ; sell_r                ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.880      ;
+; 0.630 ; st_cur.get15  ; st_cur.get25          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.898      ;
+; 0.644 ; st_cur.get10  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.912      ;
+; 0.648 ; st_cur.get10  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.916      ;
+; 0.722 ; st_cur.get25  ; charge_r[0]~_emulated ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.990      ;
+; 0.725 ; st_cur.000    ; st_cur.get05          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 0.993      ;
+; 0.749 ; st_cur.get15  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.017      ;
+; 0.772 ; st_cur.get20  ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.040      ;
+; 0.786 ; st_cur.get05  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.054      ;
+; 0.798 ; st_cur.000    ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.066      ;
+; 0.865 ; st_cur.get05  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.133      ;
+; 1.009 ; st_cur.get15  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.277      ;
+; 1.023 ; st_cur.get10  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.073      ; 1.291      ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'sys_rst_n'                                                                     ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; 1.082 ; st_cur.get10 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.314      ;
+; 1.086 ; st_cur.get05 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.318      ;
+; 1.255 ; st_cur.get25 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.054      ; 1.349      ;
+; 1.274 ; st_cur.get05 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.506      ;
+; 1.386 ; st_cur.get20 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.054      ; 1.480      ;
+; 1.391 ; st_cur.get20 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.623      ;
+; 1.420 ; st_cur.get25 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.652      ;
+; 1.485 ; st_cur.get15 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.717      ;
+; 1.539 ; st_cur.get25 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.771      ;
+; 1.555 ; st_cur.get20 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.787      ;
+; 1.613 ; st_cur.get15 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.845      ;
+; 1.668 ; st_cur.get10 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.192      ; 1.900      ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery: 'sys_clk'                                                                        ;
++-------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.130 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.130 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 0.500        ; 2.319      ; 2.671      ;
+; 0.623 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
+; 0.623 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 1.000        ; 2.319      ; 2.678      ;
++-------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal: 'sys_clk'                                                                          ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.089 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; -0.089 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 0.000        ; 2.405      ; 2.551      ;
+; 0.413  ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
+; 0.413  ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; -0.500       ; 2.405      ; 2.553      ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; sys_rst_n ; -0.487 ; -1.184        ;
+; sys_clk   ; 0.301  ; 0.000         ;
++-----------+--------+---------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-----------+-------+---------------+
+; Clock     ; Slack ; End Point TNS ;
++-----------+-------+---------------+
+; sys_clk   ; 0.158 ; 0.000         ;
+; sys_rst_n ; 0.458 ; 0.000         ;
++-----------+-------+---------------+
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++---------+--------+--------------------+
+; Clock   ; Slack  ; End Point TNS      ;
++---------+--------+--------------------+
+; sys_clk ; -0.107 ; -1.070             ;
++---------+--------+--------------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++---------+--------+-------------------+
+; Clock   ; Slack  ; End Point TNS     ;
++---------+--------+-------------------+
+; sys_clk ; -0.056 ; -0.560            ;
++---------+--------+-------------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-----------+--------+-----------------------------+
+; Clock     ; Slack  ; End Point TNS               ;
++-----------+--------+-----------------------------+
+; sys_clk   ; -3.000 ; -13.640                     ;
+; sys_rst_n ; -3.000 ; -3.000                      ;
++-----------+--------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'sys_rst_n'                                                                     ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; -0.487 ; st_cur.get20 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.954      ;
+; -0.421 ; st_cur.get10 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.893      ;
+; -0.416 ; st_cur.get25 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.883      ;
+; -0.416 ; st_cur.get15 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.888      ;
+; -0.397 ; st_cur.get15 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.864      ;
+; -0.395 ; st_cur.get20 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.867      ;
+; -0.324 ; st_cur.get25 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.796      ;
+; -0.297 ; st_cur.get05 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.769      ;
+; -0.276 ; st_cur.get20 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.067     ; 0.766      ;
+; -0.230 ; st_cur.get05 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.697      ;
+; -0.205 ; st_cur.get25 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.067     ; 0.695      ;
+; -0.199 ; st_cur.get10 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 1.000        ; -0.012     ; 0.666      ;
++--------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'sys_clk'                                                                               ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.301 ; st_cur.get10  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.649      ;
+; 0.308 ; st_cur.get15  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.642      ;
+; 0.380 ; st_cur.get05  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.570      ;
+; 0.381 ; st_cur.get05  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.569      ;
+; 0.398 ; st_cur.get25  ; charge_r[0]~_emulated ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.552      ;
+; 0.404 ; st_cur.get20  ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.546      ;
+; 0.416 ; st_cur.000    ; st_cur.get10          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.534      ;
+; 0.424 ; st_cur.get15  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.526      ;
+; 0.453 ; st_cur.000    ; st_cur.get05          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.497      ;
+; 0.468 ; st_cur.get10  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.482      ;
+; 0.473 ; st_cur.get10  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.477      ;
+; 0.481 ; st_cur.get15  ; st_cur.get25          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.469      ;
+; 0.491 ; charge_r[0]~1 ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.068     ; 0.408      ;
+; 0.492 ; st_cur.get20  ; sell_r                ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.458      ;
+; 0.525 ; charge_r[1]~5 ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.068     ; 0.374      ;
+; 0.563 ; st_cur.get25  ; sell_r                ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.387      ;
+; 0.567 ; st_cur.get25  ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.383      ;
+; 0.569 ; charge_r[2]~9 ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; -0.010     ; 0.388      ;
+; 0.600 ; st_cur.000    ; st_cur.000            ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.350      ;
+; 0.600 ; st_cur.get05  ; st_cur.get05          ; sys_clk      ; sys_clk     ; 1.000        ; -0.037     ; 0.350      ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'sys_clk'                                                                                ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node     ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.158 ; charge_r[2]~9 ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 0.067      ; 0.349      ;
+; 0.186 ; st_cur.000    ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; st_cur.get05  ; st_cur.get05          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.201 ; charge_r[1]~5 ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 0.012      ; 0.337      ;
+; 0.203 ; st_cur.get25  ; sell_r                ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.324      ;
+; 0.206 ; st_cur.get25  ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.327      ;
+; 0.213 ; charge_r[0]~1 ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 0.012      ; 0.349      ;
+; 0.259 ; st_cur.get20  ; sell_r                ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.380      ;
+; 0.268 ; st_cur.get15  ; st_cur.get25          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.389      ;
+; 0.276 ; st_cur.get10  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.397      ;
+; 0.279 ; st_cur.get10  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.400      ;
+; 0.311 ; st_cur.get25  ; charge_r[0]~_emulated ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.432      ;
+; 0.312 ; st_cur.000    ; st_cur.get05          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.433      ;
+; 0.325 ; st_cur.get15  ; st_cur.get20          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.446      ;
+; 0.334 ; st_cur.get20  ; st_cur.000            ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.455      ;
+; 0.346 ; st_cur.get05  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.467      ;
+; 0.365 ; st_cur.get05  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.486      ;
+; 0.366 ; st_cur.000    ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.487      ;
+; 0.421 ; st_cur.get15  ; st_cur.get15          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.542      ;
+; 0.429 ; st_cur.get10  ; st_cur.get10          ; sys_clk      ; sys_clk     ; 0.000        ; 0.037      ; 0.550      ;
++-------+---------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'sys_rst_n'                                                                     ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+; 0.458 ; st_cur.get05 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.566      ;
+; 0.486 ; st_cur.get10 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.594      ;
+; 0.534 ; st_cur.get25 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.010      ; 0.584      ;
+; 0.548 ; st_cur.get05 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.656      ;
+; 0.590 ; st_cur.get20 ; charge_r[2]~9 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.010      ; 0.640      ;
+; 0.603 ; st_cur.get25 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.711      ;
+; 0.633 ; st_cur.get20 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.741      ;
+; 0.652 ; st_cur.get15 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.760      ;
+; 0.659 ; st_cur.get20 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.767      ;
+; 0.671 ; st_cur.get25 ; charge_r[0]~1 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.779      ;
+; 0.719 ; st_cur.get15 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.827      ;
+; 0.721 ; st_cur.get10 ; charge_r[1]~5 ; sys_clk      ; sys_rst_n   ; 0.000        ; 0.068      ; 0.829      ;
++-------+--------------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery: 'sys_clk'                                                                         ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.107 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; -0.107 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 0.500        ; 1.145      ; 1.719      ;
+; 0.783  ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
+; 0.783  ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 1.000        ; 1.145      ; 1.329      ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal: 'sys_clk'                                                                          ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.056 ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; -0.056 ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; 0.000        ; 1.190      ; 1.258      ;
+; 0.838  ; sys_rst_n ; st_cur.get10          ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; st_cur.get20          ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; st_cur.000            ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; st_cur.get05          ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; st_cur.get15          ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; st_cur.get25          ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; charge_r[0]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; charge_r[1]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; charge_r[2]~_emulated ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
+; 0.838  ; sys_rst_n ; sell_r                ; sys_rst_n    ; sys_clk     ; -0.500       ; 1.190      ; 1.652      ;
++--------+-----------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.442 ; 0.158 ; -0.107   ; -0.091  ; -3.000              ;
+;  sys_clk         ; -0.610 ; 0.158 ; -0.107   ; -0.091  ; -3.000              ;
+;  sys_rst_n       ; -2.442 ; 0.458 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -9.715 ; 0.0   ; -1.07    ; -0.91   ; -20.87              ;
+;  sys_clk         ; -3.056 ; 0.000 ; -1.070   ; -0.910  ; -17.870             ;
+;  sys_rst_n       ; -6.659 ; 0.000 ; N/A      ; N/A     ; -3.000              ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; charge[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; charge[1]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; charge[2]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; sell          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; sys_rst_n               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; sys_clk                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; coin[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; coin[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; charge[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; charge[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; charge[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.33 V              ; -0.00421 V          ; 0.165 V                              ; 0.078 V                              ; 3.11e-09 s                  ; 2.85e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.33 V             ; -0.00421 V         ; 0.165 V                             ; 0.078 V                             ; 3.11e-09 s                 ; 2.85e-09 s                 ; Yes                       ; Yes                       ;
+; sell          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.07e-09 V                   ; 2.36 V              ; -0.00737 V          ; 0.209 V                              ; 0.012 V                              ; 5.22e-10 s                  ; 5.33e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.07e-09 V                  ; 2.36 V             ; -0.00737 V         ; 0.209 V                             ; 0.012 V                             ; 5.22e-10 s                 ; 5.33e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; charge[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; charge[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; charge[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.33 V              ; -0.0022 V           ; 0.088 V                              ; 0.056 V                              ; 3.76e-09 s                  ; 3.48e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.33 V             ; -0.0022 V          ; 0.088 V                             ; 0.056 V                             ; 3.76e-09 s                 ; 3.48e-09 s                 ; Yes                       ; Yes                       ;
+; sell          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.93e-07 V                   ; 2.34 V              ; -0.00869 V          ; 0.14 V                               ; 0.046 V                              ; 6.89e-10 s                  ; 6.56e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.93e-07 V                  ; 2.34 V             ; -0.00869 V         ; 0.14 V                              ; 0.046 V                             ; 6.89e-10 s                 ; 6.56e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; charge[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; charge[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; charge[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; sell          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk   ; 17       ; 0        ; 0        ; 0        ;
+; sys_rst_n  ; sys_clk   ; 3        ; 0        ; 0        ; 0        ;
+; sys_clk    ; sys_rst_n ; 13       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; sys_clk    ; sys_clk   ; 17       ; 0        ; 0        ; 0        ;
+; sys_rst_n  ; sys_clk   ; 3        ; 0        ; 0        ; 0        ;
+; sys_clk    ; sys_rst_n ; 13       ; 0        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_rst_n  ; sys_clk  ; 10       ; 10       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sys_rst_n  ; sys_clk  ; 10       ; 10       ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 19    ; 19   ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 24    ; 24   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------+
+; Clock Status Summary                       ;
++-----------+-----------+------+-------------+
+; Target    ; Clock     ; Type ; Status      ;
++-----------+-----------+------+-------------+
+; sys_clk   ; sys_clk   ; Base ; Constrained ;
+; sys_rst_n ; sys_rst_n ; Base ; Constrained ;
++-----------+-----------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; coin[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; coin[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sys_rst_n  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; charge[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; charge[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; charge[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sell        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; coin[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; coin[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sys_rst_n  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; charge[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; charge[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; charge[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sell        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Fri Nov  1 15:01:55 2024
+Info: Command: quartus_sta Refund_function -c Refund_function
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 3 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Refund_function.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name sys_clk sys_clk
+    Info (332105): create_clock -period 1.000 -name sys_rst_n sys_rst_n
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.442
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.442              -6.659 sys_rst_n 
+    Info (332119):    -0.610              -3.056 sys_clk 
+Info (332146): Worst-case hold slack is 0.452
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.452               0.000 sys_clk 
+    Info (332119):     1.175               0.000 sys_rst_n 
+Info (332146): Worst-case recovery slack is 0.060
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.060               0.000 sys_clk 
+Info (332146): Worst-case removal slack is -0.091
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.091              -0.910 sys_clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -17.870 sys_clk 
+    Info (332119):    -3.000              -3.000 sys_rst_n 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.164
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.164              -5.859 sys_rst_n 
+    Info (332119):    -0.452              -1.884 sys_clk 
+Info (332146): Worst-case hold slack is 0.401
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.401               0.000 sys_clk 
+    Info (332119):     1.082               0.000 sys_rst_n 
+Info (332146): Worst-case recovery slack is 0.130
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.130               0.000 sys_clk 
+Info (332146): Worst-case removal slack is -0.089
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.089              -0.890 sys_clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -17.870 sys_clk 
+    Info (332119):    -3.000              -3.000 sys_rst_n 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.487
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.487              -1.184 sys_rst_n 
+    Info (332119):     0.301               0.000 sys_clk 
+Info (332146): Worst-case hold slack is 0.158
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.158               0.000 sys_clk 
+    Info (332119):     0.458               0.000 sys_rst_n 
+Info (332146): Worst-case recovery slack is -0.107
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.107              -1.070 sys_clk 
+Info (332146): Worst-case removal slack is -0.056
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.056              -0.560 sys_clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -13.640 sys_clk 
+    Info (332119):    -3.000              -3.000 sys_rst_n 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Fri Nov  1 15:01:56 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

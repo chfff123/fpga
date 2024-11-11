@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov  1 14:22:47 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : Lecture_side
+Top-level Entity Name : Lecture_side
+Family : Cyclone IV E
+Total logic elements : 11
+    Total combinational functions : 11
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
