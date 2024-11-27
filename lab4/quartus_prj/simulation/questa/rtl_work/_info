@@ -1,0 +1,169 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/simulation/questa
+T_opt
+!s110 1732628917
+VaQ4AI<>>^NT8IV<7Q`]PW1
+04 11 4 work tb_vga_char fast 0
+=1-c43d1a1afe50-6745d1b4-39a-19c
+R0
+!s12b OEM100
+!s124 OEM10U5 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vclk_gen
+2C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/ip_core/clk_gen.v
+!s110 1732628914
+!i10b 1
+!s100 ifhShLajK5[b`XbbEH2UB3
+IEl:k8HMZ]G]oO[?^<e2id2
+R1
+w1731505448
+8C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/ip_core/clk_gen.v
+FC:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/ip_core/clk_gen.v
+!i122 0
+L0 40 124
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1732628914.000000
+!s107 C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/ip_core/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/ip_core|C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/ip_core/clk_gen.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/ip_core -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vclk_gen_altpll
+2C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/db/clk_gen_altpll.v
+Z6 !s110 1732628915
+!i10b 1
+!s100 iK=4CA=J8^HIzAa5Kc?hj0
+I=d=;<m;Y2gHEC62z_?KSP1
+R1
+w1731505473
+8C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/db/clk_gen_altpll.v
+FC:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/db/clk_gen_altpll.v
+!i122 4
+L0 31 79
+R3
+R4
+r1
+!s85 0
+31
+Z7 !s108 1732628915.000000
+!s107 C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/db|C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/db/clk_gen_altpll.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_vga_char
+2C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/../sim/tb_vga_char.v
+!s110 1732628916
+!i10b 1
+!s100 DU=CH<=@^izQNHYRa6LDT0
+IndOIa3TlXn<EDPKnE^0mj3
+R1
+w1732628799
+8C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/../sim/tb_vga_char.v
+FC:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/../sim/tb_vga_char.v
+!i122 5
+L0 38 53
+R3
+R4
+r1
+!s85 0
+31
+!s108 1732628916.000000
+!s107 C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/../sim/tb_vga_char.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/../sim|C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/../sim/tb_vga_char.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/lab4/quartus_prj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vvga_char
+2C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_char.v
+R6
+!i10b 1
+!s100 `5PCQj6LQ3i=JOdTW?:Uc1
+IWIQD2Q;gN?DC?UTNEIT3j1
+R1
+Z8 w1640252100
+8C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_char.v
+FC:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_char.v
+!i122 3
+L0 20 65
+R3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_char.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab4/rtl|C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_char.v|
+!i113 0
+R5
+Z9 !s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/lab4/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vvga_ctrl
+2C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_ctrl.v
+R6
+!i10b 1
+!s100 ]5RC=gY70z1bag1SnXR?>2
+IXl7OnF;ob7YM<o3<@D[Nh3
+R1
+R8
+8C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_ctrl.v
+FC:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_ctrl.v
+!i122 2
+L0 20 96
+R3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab4/rtl|C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_ctrl.v|
+!i113 0
+R5
+R9
+R2
+vvga_pic
+2C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_pic.v
+R6
+!i10b 1
+!s100 OZJWkD@0_S;zO25P<3IV[1
+I4D3P;V9ZCFfCzeFFi;iHM1
+R1
+w1731506396
+8C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_pic.v
+FC:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_pic.v
+!i122 1
+L0 20 124
+R3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_pic.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/lab4/rtl|C:/Users/g1390/Desktop/FPGA/lab4/rtl/vga_pic.v|
+!i113 0
+R5
+R9
+R2

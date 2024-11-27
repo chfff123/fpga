@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/simulation/questa
+T_opt
+!s110 1732622551
+V=S@Ia;4VUgB47>0BhUZ;h2
+04 13 4 work tb_key_filter fast 0
+=1-c43d1a1afe50-6745b8d6-266-15e0
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+vkey_filter
+2C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/RTL/key_filter.v
+Z3 !s110 1732622549
+!i10b 1
+!s100 HBfK29BZZY6fFASDC:1@@2
+IZ;iJGSgi?Z6I2C0dMg6h23
+R1
+Z4 w1732104770
+8C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/RTL/key_filter.v
+FC:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/RTL/key_filter.v
+!i122 0
+L0 1 45
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1732622549.000000
+!s107 C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/RTL/key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/RTL|C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/RTL/key_filter.v|
+!i113 0
+Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/RTL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_key_filter
+2C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/../Sim/tb_key_filter.v
+R3
+!i10b 1
+!s100 N3P0D`OJ1SO@UD4=gMUD53
+IX0IW7GKlX1V6;?B[2R1Wi3
+R1
+R4
+8C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/../Sim/tb_key_filter.v
+FC:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/../Sim/tb_key_filter.v
+!i122 1
+L0 2 97
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/../Sim/tb_key_filter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/../Sim|C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/../Sim/tb_key_filter.v|
+!i113 0
+R8
+!s92 -vlog01compat -work work +incdir+C:/Users/g1390/Desktop/FPGA/Lab5/2_Key_Debounce/Quartus_prj/../Sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
